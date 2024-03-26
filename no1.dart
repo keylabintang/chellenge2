@@ -26,7 +26,7 @@ void main() {
   stdout.write("Masukan skor Koala juri c : ");
   var koala_juri_c = int.parse(stdin.readLineSync()!);
 
-  // Data skor Lumba-lumba
+  // Data skor Koala
   List<int> koalaSkor = [koala_juri_a, koala_juri_b, koala_juri_c];
 
   // Menghitung skor rata-rata untuk setiap tim
@@ -40,6 +40,7 @@ void main() {
   print(menentukan_pemenang(rataRataLumbaLumba, rataRataKoala));
 }
 
+//perhitungan rata-rata
 double menghitung_ratarata(List<int> skors) {
   double total = 0;
   for (int skor in skors) {
@@ -48,6 +49,7 @@ double menghitung_ratarata(List<int> skors) {
   return total / skors.length;
 }
 
+//Aturan perhitungan pemenang
 String menentukan_pemenang(double lumbaLumba, double koala) {
   if (lumbaLumba > koala && lumbaLumba >= 100) {
     return "Selamat! Tim Lumba-lumba menang!";
